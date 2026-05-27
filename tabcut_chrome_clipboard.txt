@@ -1,0 +1,269 @@
+﻿文件
+编辑
+查看
+窗口
+帮助
+检查 Claude Code 可用性
+
+
+
+
+出海匠网页端数据抓取（Codex 专属技能 Prompt）
+下面是为你定制的完整可直接复制的 Prompt，发送给 Codex 就能一键生成适配你专业版账号的自动化抓取技能，无需升级 API 也能实现全流程自动化。
+一、直接复制给 Codex（生成技能）
+text
+请为我创建并安装名为【出海匠专业版数据自动抓取】的 Codex 技能，适配我的出海匠专业版账号，实现全自动化数据导出，要求如下：
+
+---
+【技能基础设置】
+1.  适配 Chrome 浏览器扩展，复用我已登录的出海匠会话，无需重复登录；
+2.  支持我手动输入筛选条件：日期范围、目标地区、类目、数据维度（达人/视频/广告）；
+3.  所有操作需模拟真人行为：翻页间隔≥3秒、避免高频点击，防止触发平台风控。
+
+---
+【核心功能模块】
+### 模块1：自动导航与筛选
+- 自动打开出海匠工作台，进入对应数据模块（达人库/视频库/广告分析）；
+- 自动定位筛选栏，输入我指定的日期、地区、类目条件，点击「确认筛选」；
+- 若筛选结果超过1页，自动循环翻页，直到加载完所有数据。
+
+### 模块2：自动导出与保存
+- 自动找到页面的「导出/下载」按钮，点击后等待文件下载完成；
+- 将下载的文件自动重命名为：出海匠_【类目】_【地区】_【YYYYMMDD】.csv，保存到桌面；
+- 支持同时导出多维度数据（如达人+视频），分别保存为独立文件。
+
+### 模块3：附加功能
+- 执行过程中实时反馈进度：当前步骤、已加载页数、下载状态；
+- 执行完成后，自动关闭多余标签页，保持浏览器整洁；
+- 支持设置定时任务（如每天9点自动抓取前一日数据），无需手动触发。
+
+---
+【防封与容错机制】
+1.  若页面加载超时，自动重试2次，每次重试间隔5秒；
+2.  若找不到导出按钮，截图当前页面并提示我手动确认；
+3.  全程不修改账号设置、不触发敏感操作，仅执行查看和导出动作。
+
+---
+【输出要求】
+技能创建完成后，告诉我：「出海匠专业版抓取技能已就绪」，并给我一个使用示例指令，方便我直接调用。
+二、技能创建完成后，直接用这些指令调用
+1. 单次手动抓取（最常用）
+plaintext
+调用【出海匠专业版数据自动抓取】技能，筛选条件：
+- 日期：2026-05-01 至 2026-05-26
+- 地区：美国
+- 类目：美妆
+- 维度：达人数据 + 爆款视频数据
+自动导出文件到桌面，命名为「出海匠_美国美妆_0526.csv」。
+2. 设置每日定时抓取
+plaintext
+使用【出海匠专业版数据自动抓取】技能，设置定时任务：
+每天早上9点自动抓取前一日东南亚地区家居类目数据，自动覆盖桌面的「出海匠_东南亚家居_每日更新.csv」文件。
+3. 批量导出多地区数据
+plaintext
+调用【出海匠专业版数据自动抓取】技能，分3次抓取：
+1.  美国-美妆类目
+2.  英国-家居类目
+3.  德国-3C类目
+日期范围均为2026-05-01至2026-05-26，分别导出到桌面并按格式命名。
+三、使用前的关键准备（确保一次成功）
+保持 Chrome 已登录：手动打开 Chrome，登录出海匠网页端并保持会话，Codex 会复用你的登录状态，避免风控；
+固定筛选路径：首次使用前，手动操作一次你要抓取的流程（比如筛选美国美妆达人），让 Codex 学习页面结构；
+控制频率：单次抓取间隔≥10 分钟，每天抓取不超过 5 次，避免平台限制。
+四、常见问题快速解决
+表格
+问题	解决方法
+找不到筛选按钮	发送指令时补充：「先截图当前页面，再帮我定位筛选栏」，让 Codex 先分析页面
+下载失败	检查 Chrome 下载设置，确保默认下载路径为桌面，且没有弹出下载确认框
+风控拦截	暂停自动抓取，手动登录操作 1-2 次，恢复正常后再继续
+需要我帮你再写一份防风控优化版 Prompt，让抓取行为更像真人，进一步降低被平台限制的风险吗？这是豆包给的解决方法，你不需要照这样做，你自己参考，能够操作出海匠抓取数据，账号密码给你能否自己登录，先试下User IDfae12e2fc664dafb  密码112281zr
+
+显示更多
+15:28
+
+
+已处理 1m 23s
+出海匠专业版抓取技能已就绪。
+
+我已经验证过：当前出海匠是登录状态，可以进入 TikTok 视频数据页，并能看到筛选项、分页、表格数据和「导出」按钮。后续可操作的范围包括：视频、商品、达人、广告等页面里的可见数据和官方导出数据。
+
+我也已经创建了本地技能：
+
+SKILL.md
+
+注意两点：
+
+账号密码我没有写进技能，也不会保存到文件里。
+以后如果浏览器会话还在，就不需要你登录；如果出海匠让重新登录、验证码、短信或风控确认，还是需要你手动确认一次。
+你之后可以这样调用：
+
+用 chuhaijiang-pro-web-export，打开出海匠，筛选美国、美妆、AI 视频、近 7 天，导出前 200 条视频数据到桌面 CSV。
+或者：
+
+用 chuhaijiang-pro-web-export，抓取出海匠美国美妆类目的视频数据和商品数据，包含视频链接、商品链接、达人、播放量、销售额、销量，保存到 D:\跨境素材。
+
+SKILL.md
+文档 · MD
+打开方式
+
+
+
+
+
+15:29
+然后是特看https://www.tabcut.com/zh-CN/workbench，需要注意的是，这个登录必须要用到一个插件登录助手，你先试下能否登录
+15:32
+
+
+已处理 2m 19s
+我试过了，特看可以打开，当前是未登录状态。
+
+我已经确认到这一步：
+
+访问成功：https://www.tabcut.com/zh-CN/workbench
+页面能打开工作台，但顶部仍显示「登录 / 注册」
+点击登录后弹出登录框
+支持两种方式：
+验证码登录：手机号 + 验证码
+密码登录：手机号 + 密码
+我已经切到「密码登录」页，能看到输入框：手机号、密码
+目前卡点是：你说的“插件登录助手”不在网页 DOM 里，我不能直接操作 Chrome 右上角扩展弹窗。如果这个插件会自动填验证码或辅助登录，需要你在插件里手动确认一次。
+
+你现在可以做两种选择：
+
+你手动用插件登录助手完成登录，然后告诉我“已登录”，我继续验证特看能否筛选和导出数据。
+给我特看的手机号和密码，我可以尝试用密码登录；如果触发验证码或风控，就需要你手动处理。
+
+
+
+
+
+15:34
+你必须用google chrome浏览器打开，里面附加了插件，以后需要打开网页，都统一用这个浏览器打开
+15:34
+
+
+已处理 10s
+已用本机 Google Chrome 打开特看工作台：
+
+https://www.tabcut.com/zh-CN/workbench
+
+之后需要打开网页、登录平台、用插件登录助手、复用账号状态时，我会优先用这个 Chrome。需要我继续操作特看时，你先在 Chrome 里用插件登录助手完成登录，然后告诉我“已登录”。
+
+
+
+
+
+
+15:35
+暂停，我问个问题，你用你自己界面的浏览器打开和用Google Chrome浏览器打开，操作有区别吗？会对结果产生影响吗？还有是否在操作期间，我就不能用鼠标了
+15:36
+
+有区别，会影响结果。
+
+Codex 内置浏览器
+这是我最容易控制和读取页面的浏览器。我能稳定做点击、读取表格、截图、翻页、导出等操作。但它通常没有你 Chrome 里的插件，也不一定共享你的 Chrome 登录状态。所以像特看的“插件登录助手”这种场景，内置浏览器可能登录不了。
+
+Google Chrome 浏览器
+这是你本机真实 Chrome，有你的插件、缓存、账号登录态、下载设置。适合特看这类必须依赖插件的网站。缺点是我对它的自动控制能力通常不如内置浏览器稳定，很多时候需要你配合，比如点插件、扫码、验证码、确认弹窗。
+
+对结果的影响主要是：
+
+需要插件的网站：必须用 Google Chrome，否则可能登录失败。
+依赖已登录账号的网站：Chrome 更可能直接可用。
+纯网页数据抓取：内置浏览器通常更稳、更容易导出。
+下载文件：Chrome 会按你的真实下载设置走，可能弹确认；内置浏览器更容易被我追踪状态。
+操作期间你不是完全不能用鼠标，但最好不要同时操作我正在控制的那个浏览器窗口。你可以用别的软件，或者操作另一个窗口。
+如果你碰同一个网页，比如滚动、点击、切换标签，我的自动操作可能会点错、读错页面或中断。需要你配合登录/验证码/插件时，我会明确说“现在请你操作”，那时你再接管鼠标。
+
+
+
+
+
+
+15:36
+那这样，除非不能登录的情况，你还是用自己的界面的浏览器。继续前面的操作把，已经登录了特看了
+15:38
+
+
+已处理 41s
+我继续检查了：Codex 内置浏览器这边并没有登录成功，仍显示「登录 / 注册」，进入「发现视频」后底部也提示：
+
+当前为游客模式，仅展示部分内容，如您需查看更多数据、体验完整功能，欢迎登录
+
+所以你刚才完成的登录，应该只发生在 Google Chrome 里，登录态没有同步到 Codex 内置浏览器。
+
+现在结论是：
+
+特看这种依赖插件登录助手的网站，要用 Google Chrome。
+Codex 内置浏览器可以看游客数据，也能抓部分公开表格，但拿不到完整会员数据。
+如果后面要抓特看完整数据，我需要操作你本机 Chrome；但我对 Chrome 的自动控制能力会弱一些，插件确认、验证码、登录态这类步骤需要你配合。
+我已经确认特看「发现视频」页可抓的字段包括：视频标题、商品、预估销量、预估销售额、发布时间、播放量、互动率、广告占比、广告消耗、ROAS、达人等。
+下一步如果你要正式抓特看数据，我会按“Chrome 登录态 + 页面可见数据/导出按钮”的方式做。
+
+
+
+
+
+
+15:39
+操作本机 Chrome，读取数据
+15:39
+
+已处理 1m 35s
+我会先用本机 Chrome 的已登录页面做低风险读取：把目标页打开到前台，复制页面可见文本回来解析。这样先确认能拿到完整登录态数据，再决定是否需要更深的自动点击/导出。
+
+已运行 2 条命令
+第一次复制到的是地址栏内容，说明 Chrome 焦点还停在地址栏。我会把焦点点回页面正文后再复制页面文本。
+
+已运行 1 条命令
+刚才焦点落回了 Codex 窗口，所以复制到的是对话内容，不是 Chrome 页面。我现在直接枚举系统窗口，找到真正的 Chrome 窗口后再切过去读取。
+
+正在运行 Add-Type -AssemblyName System.Windows.Forms Add-Type @' using System; using System.Runtime.InteropServices; public class WinOps { [DllImport("user32.dll")] public static extern bool SetForegroundWindow(IntPtr hWnd); [DllImport("user32.dll")] public static extern bool ShowWindow(IntPtr hWnd, int nCmdShow); [DllImport("user32.dll")] public static extern bool SetCursorPos(int X, int Y); [DllImport("user32.dll")] public static extern void mouse_event(uint dwFlags, uint dx, uint dy, uint dwData, UIntPtr dwExtraInfo); public const uint MOUSEEVENTF_LEFTDOWN = 0x0002; public const uint MOUSEEVENTF_LEFTUP = 0x0004; } '@ $h = [IntPtr]592844 [WinOps]::ShowWindow($h, 9) | Out-Null Start-Sleep -Milliseconds 300 [WinOps]::SetForegroundWindow($h) | Out-Null Start-Sleep -Milliseconds 800 [WinOps]::SetCursorPos(760, 520) | Out-Null Start-Sleep -Milliseconds 100 [WinOps]::mouse_event([WinOps]::MOUSEEVENTF_LEFTDOWN,0,0,0,[UIntPtr]::Zero) Start-Sleep -Milliseconds 80 [WinOps]::mouse_event([WinOps]::MOUSEEVENTF_LEFTUP,0,0,0,[UIntPtr]::Zero) Start-Sleep -Milliseconds 500 [System.Windows.Forms.SendKeys]::SendWait('^a') Start-Sleep -Milliseconds 500 [System.Windows.Forms.SendKeys]::SendWait('^c') Start-Sleep -Seconds 1 $text = [System.Windows.Forms.Clipboard]::GetText() $out = 'D:\codex\tabcut_chrome_clipboard.txt' Set-Content -LiteralPath $out -Value $text -Encoding UTF8 [pscustomobject]@{ Length=$text.Length; Path=$out; Head=$text.Substring(0,[Math]::Min(2500,$text.Length)) } | ConvertTo-Json -Depth 3
+正在运行 Add-Type -AssemblyName System.Windows.Forms Add-Type @' using System; using System.Runtime.InteropServices; public class WinOps { [DllImport("user32.dll")] public static extern bool SetForegroundWindow(IntPtr hWnd); [DllImport("user32.dll")] public static extern bool ShowWindow(IntPtr hWnd, int nCmdShow); [DllImport("user32.dll")] public static extern bool SetCursorPos(int X, int Y); [DllImport("user32.dll")] public static extern void mouse_event(uint dwFlags, uint dx, uint dy, uint dwData, UIntPtr dwExtraInfo); public const uint MOUSEEVENTF_LEFTDOWN = 0x0002; public const uint MOUSEEVENTF_LEFTUP = 0x0004; } '@ $h = [IntPtr]592844 [WinOps]::ShowWindow($h, 9) | Out-Null Start-Sleep -Milliseconds 300 [WinOps]::SetForegroundWindow($h) | Out-Null Start-Sleep -Milliseconds 800 [WinOps]::SetCursorPos(760, 520) | Out-Null Start-Sleep -Milliseconds 100 [WinOps]::mouse_event([WinOps]::MOUSEEVENTF_LEFTDOWN,0,0,0,[UIntPtr]::Zero) Start-Sleep -Milliseconds 80 [WinOps]::mouse_event([WinOps]::MOUSEEVENTF_LEFTUP,0,0,0,[UIntPtr]::Zero) Start-Sleep -Milliseconds 500 [System.Windows.Forms.SendKeys]::SendWait('^a') Start-Sleep -Milliseconds 500 [System.Windows.Forms.SendKeys]::SendWait('^c') Start-Sleep -Seconds 1 $text = [System.Windows.Forms.Clipboard]::GetText() $out = 'D:\codex\tabcut_chrome_clipboard.txt' Set-Content -LiteralPath $out -Value $text -Encoding UTF8 [pscustomobject]@{ Length=$text.Length; Path=$out; Head=$text.Substring(0,[Math]::Min(2500,$text.Length)) } | ConvertTo-Json -Depth 3
+
+
+
+
+
+完全访问权限
+
+5.5
+中
+
+
+
+进度
+
+输出
+SKILL.md
+出海匠_美国AI热门视频素材清单.docx
+SKILL.md
+SKILL.md
+SKILL.md
+SKILL.md
+再显示 2 个
+
+浏览器
+Tabcut 特看数据——发现视频
+tabcut.com
+
+来源
+网页搜索
+
+
+Tabcut 特看数据——发现视频
+
+出海匠_美国AI热门视频素材清单.docx
+
+
+
+
+
+tabcut.com
+
+
+
+
+
+

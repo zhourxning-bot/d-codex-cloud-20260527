@@ -1,0 +1,14 @@
+.codex/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.xlsx
+~$*.docx
+
+# Generated render/cache artifacts
+outputs/**/shopify_report_render/
+outputs/**/.cache/
+outputs/**/node_modules/
+outputs/**/__pycache__/

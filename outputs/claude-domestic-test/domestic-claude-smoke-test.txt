@@ -1,0 +1,15 @@
+Domestic Claude Code Smoke Test Report
+=====================================
+
+This was a domestic/default Claude Code invocation test — no official wrapper
+(no claude-official) was used. The worker ran directly inside the codex-with-cc
+delegate workflow as an implementer child thread.
+
+Test metadata:
+  Date:       2026-05-26
+  Task ID:    domestic-smoke-001
+  Status:     DONE
+
+The task completed successfully: the Claude Code CLI was invoked through the
+standard codex-with-cc delegation path, the required proof report was written,
+and the file existence was verified.
