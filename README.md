@@ -97,7 +97,7 @@ Download `dist/context-handoff.skill` and install it in Codex.
 
 Clone or browse this repository directly:
 
-- `zhourxning-bot/codex-context-handoff`
+- `zhourong-bot/codex-context-handoff`
 
 ## File layout
 
