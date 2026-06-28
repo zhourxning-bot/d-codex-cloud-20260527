@@ -37,10 +37,9 @@ A basic handoff skill usually just summarizes a conversation. This version goes 
 ## Install
 
 - Download the packaged skill: `dist/context-handoff.skill`
-- Or use the GitHub repository directly: `zhourxning-bot/d-codex-cloud-20260527`
+- Or use the GitHub repository directly: `zhourxning-bot/codex-context-handoff`
 
 ## Notes
 
 - The skill avoids raw transcript dumping and preserves only what the next chat needs.
 - The release tag for this version is `context-handoff-v1.0.0`.
-
