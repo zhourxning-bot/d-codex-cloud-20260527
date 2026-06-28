@@ -1,4 +1,4 @@
-# context-handoff examples
+# Codex Context Handoff examples
 
 These are shape references, not fixed copy.
 

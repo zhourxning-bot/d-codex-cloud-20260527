@@ -24,5 +24,4 @@ Create a copy-ready restart for a new chat without dumping raw transcript.
 ## Files
 
 - `SKILL.md`: the operational skill
-- `examples.md`: sample restart shapes for quick reference
-
+- `handoff-examples.md`: sample restart shapes for quick reference

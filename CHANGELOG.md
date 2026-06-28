@@ -1,16 +1,16 @@
-# context-handoff v1.0.0
+# Codex Context Handoff v1.0.0
 
 Released: 2026-06-28
 
 ## Summary
 
-`context-handoff` is now published as a reusable skill for turning an in-progress conversation into a concise, copy-ready restart for a new chat.
+`Codex Context Handoff` is now published as a reusable skill for turning an in-progress conversation into a concise, copy-ready restart for a new chat.
 
 ## What is included
 
 - `skills/context-handoff/SKILL.md`
 - `skills/context-handoff/README.md`
-- `skills/context-handoff/examples.md`
+- `skills/context-handoff/handoff-examples.md`
 - `dist/context-handoff.skill`
 
 ## Highlights
@@ -43,3 +43,4 @@ A basic handoff skill usually just summarizes a conversation. This version goes 
 
 - The skill avoids raw transcript dumping and preserves only what the next chat needs.
 - The release tag for this version is `context-handoff-v1.0.0`.
+

@@ -1,6 +1,6 @@
-# context-handoff
+# Codex Context Handoff
 
-`context-handoff` is a reusable Codex skill for turning an in-progress conversation into a concise, copy-ready restart for a new chat.
+`Codex Context Handoff` is a reusable Codex skill for turning an in-progress conversation into a concise, copy-ready restart for a new chat.
 
 It is designed as an evolved handoff workflow, not just a summary generator. Instead of always returning the same shape, it chooses the restart format that best fits the conversation.
 
@@ -103,15 +103,15 @@ Clone or browse this repository directly:
 
 - `skills/context-handoff/SKILL.md` - main skill logic
 - `skills/context-handoff/README.md` - skill-local usage notes
-- `skills/context-handoff/examples.md` - restart shape examples
+- `skills/context-handoff/handoff-examples.md` - restart shape examples
 - `dist/context-handoff.skill` - packaged installable skill
-- `RELEASE.md` - English release note
+- `CHANGELOG.md` - English release note
 
 ## Release
 
 - Version: `v1.0.0`
 - Tag: `context-handoff-v1.0.0`
-- Release note: `RELEASE.md`
+- Release note: `CHANGELOG.md`
 
 ## FAQ
 
@@ -148,7 +148,7 @@ This repository is organized to keep the operational skill compact and the publi
 
 - Main logic: `skills/context-handoff/SKILL.md`
 - User-facing guidance: `skills/context-handoff/README.md`
-- Sample shapes: `skills/context-handoff/examples.md`
+- Sample shapes: `skills/context-handoff/handoff-examples.md`
 - Packaged artifact: `dist/context-handoff.skill`
 
 ## Notes
